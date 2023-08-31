@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <p>¡Agrega un borde con un sólo click!</p>
+      <img
+        src="assets/img/photo-1560790671-b76ca4de55ef.jfif"
+        id="img"
+        onclick="
+  
+        //Variables
+        const img = document.querySelector('#img');
+        
+        
+        //El método
+        if (img.style.border === '2px solid red') {
+          img.style.border = 'none';
+          console.log('quito el borde');
+        } else {
+          img.style.border = '2px solid red';
+          console.log('aplico el borde');
+        }
+      
+    "
+      />
+    </div>
+  </body>
+</html>

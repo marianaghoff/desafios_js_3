@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <h1>Selecciona tus stickers</h1>
+
+      <div class="container">
+        <div class="sticker">
+          <img src="assets/img/st1.jpg" alt="Sticker 1" />
+          <input type="number" id="input1" min="0" max="10" value="0" />
+        </div>
+
+        <div class="sticker">
+          <img src="assets/img/st2.jpg" alt="Sticker 2" />
+          <input type="number" id="input2" min="0" max="10" value="0" />
+        </div>
+
+        <div class="sticker">
+          <img src="assets/img/st3.jpg" alt="Sticker 3" />
+          <input type="number" id="input3" min="0" max="10" value="0" />
+        </div>
+      </div>
+
+      <div class="container">
+        <button
+          id="btn"
+          onclick="
+          //Variables
+          const input1 = document.querySelector('#input1');
+          const input2 = document.querySelector('#input2');
+          const input3 = document.querySelector('#input3');
+          const parrafo = document.querySelector('#parrafo');
+          const button = document.querySelector('#btn');
+      
+          const input1Value = input1.value;
+          const input2Value = input2.value;
+          const input3Value = input3.value;
+      
+          const total = Number(input1Value) + Number(input2Value) + Number(input3Value);
+      
+          if (Number(total) <= 10) {
+            parrafo.innerHTML = 'Llevas ' + total + ' stickers';
+          } else if (Number(total)>10) {
+            parrafo.innerHTML = 'Llevas demasiados stickers';
+          }
+      
+      
+      "
+        >
+          Calcular
+        </button>
+        <p id="parrafo"></p>
+      </div>
+    </div>
+  </body>
+</html>

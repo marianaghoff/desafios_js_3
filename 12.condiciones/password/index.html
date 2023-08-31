@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container1">
+      <img src="assets/img/logo-bbva.jpg" />
+      <p>Ingresa tu PIN</p>
+      <select id="select1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+      </select>
+
+      <select id="select2">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+      </select>
+
+      <select id="select3">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+      </select>
+
+      <button
+        id="btn"
+        onclick="
+        //Variables
+        const select1 = document.querySelector('#select1');
+        const select2 = document.querySelector('#select2');
+        const select3 = document.querySelector('#select3');
+        const parrafo = document.querySelector('#parrafo');
+        
+        const select1Value = select1.value;
+        const select2Value = select2.value;
+        const select3Value = select3.value;
+
+        const password = select1Value + select2Value + select3Value;
+
+        if (password == '911') {
+            parrafo.innerHTML = 'Contraseña 1 es correcta';
+        } else if (password == '714') {
+            parrafo.innerHTML = 'Contraseña 2 es correcta';
+        } else {
+            parrafo.innerHTML = 'Contraseña incorrecta';
+        }
+    
+    "
+      >
+        Validar
+      </button>
+
+      <p id="parrafo">Contraseña</p>
+    </div>
+  </body>
+</html>
